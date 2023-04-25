@@ -73,6 +73,12 @@ button:hover{
     top: 0em;
     position: absolute;
 }
+input{
+    display: none;
+}
+label{
+    display: none;
+}
 
 main{
     width: 100%;
@@ -200,98 +206,73 @@ h2{
     }
   }
 
-@media (width: 820px )  /*Resolucion para Ipad*/ {
- body{
-    border: 20px;
-    margin: 0px;
-    background-color: #3C27F4;
-}
- header{
-    background-color: transparent;
-    height: 5rem;
-    width: 100%;
-    border: 4px transparent dashed;
-    position: relative;
-    max-width: 100%;
-    top: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-content: center;
- }
- h1{
-    font-size: 10em;
-    font-family: 'Poppins', sans-serif;
-    z-index: 1;
-    text-shadow: -6px 6px 18px #bdab91d1;
-    margin: 1px;
-    color: azure;
-}
-button{
-    border-radius: 50px;
-    font-style: italic;
-    font-family: 'poppins';
-    height: 31px;
-    width: 137px;
-    font-size: 15px;
-    box-shadow: -5px 0px 0px #ff8787;
-    border: 0px;
-
-}
-#Logo {
-    height: 9rem;
-    width: 12rem;
-    left: -2em;
-    margin-left: 20px;
-    top: 1em;
-    position: absolute;
+  label{
+    display: none;
   }
+input{
+    display: none;
 }
-
-@media (max-width: 768px)  /*Resolucion para tablets*/ {
-    body{
-       border: 20px;
-       margin: 0px;
-       background-color: #3C27F4;
-   }
+@media all and (max-width: 768px) { /*cuando el dispositivo es como máximo de 700px*/
     header{
-       background-color: transparent;
-       height: 5rem;
-       width: 100%;
-       border: 4px transparent dashed;
-       position: relative;
-       max-width: 100%;
-       top: 1em;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: flex-end;
-       align-content: center;
+        height: 20em;
     }
-    h1{
-       font-size: 10em;
-       font-family: 'Poppins', sans-serif;
-       z-index: 1;
-       text-shadow: -6px 6px 18px #bdab91d1;
-       margin: 1px;
-       color: azure;
-   }
-   button{
-       border-radius: 50px;
-       font-style: italic;
-       font-family: 'poppins';
-       height: 31px;
-       width: 137px;
-       font-size: 15px;
-       box-shadow: -5px 0px 0px #ff8787;
-       border: 0px;
-   
-   }
-   #Logo {
-    height: 9rem;
-    width: 12rem;
-    left: 32em;
-    margin-left: 20px;
-    top: 10em;
-    position: absolute;
-     }
-   }
+
+    input:checked ~ ul { /*muestra todas el contenido de todas las etiquetas ul */
+        display: block;
+    }
+
+    input:checked ~ label { /*muestra todo el contenido de todas las etiquetas label */
+        background: lightgrey;
+        position: relative;
+        top: 20px;
+    }
+
+    label:hover { /*cambia el color de ☰ */
+        background: grey;
+    }
+
+    li { /*elimina el margen  de cada botón */
+        margin: 0px;
+        text-align: left;
+    }
+
+    label { /* dibuja la etiqueta ☰  con formato botón */
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: chocolate;
+    }
+
+    nav{
+        margin-right: 35px;
+    }
+
+
+    ul { /*deja de mostrar el bloque contenedor de los botones horizontales */
+        display: none;
+    }
+    ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+        ul li a:hover {
+            color: red;
+        }
+    
+        div nav ul li{
+            display: flex;
+            justify-content: center;
+        }
+        #Logo{
+            position: relative;
+        }
+    
+}

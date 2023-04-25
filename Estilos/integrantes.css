@@ -1,6 +1,4 @@
-html{
 
-}
 html{
     font-size: 10px;
 }
@@ -56,6 +54,7 @@ button{
     font-size: 15px;
     box-shadow: -5px 0px 0px #ff8787;
     border: 0px;
+    margin-right: 25px;
 
 }
 button:hover{
@@ -72,3 +71,74 @@ input{
 label{
     display: none;
 }
+
+section{
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    
+}
+
+@media all and (max-width: 768px) { /*cuando el dispositivo es como máximo de 700px*/
+    header{
+        height: 20em;
+    }
+
+    input:checked ~ ul { /*muestra todas el contenido de todas las etiquetas ul */
+        display: block;
+    }
+
+    input:checked ~ label { /*muestra todo el contenido de todas las etiquetas label */
+        position: relative;
+        top: 50px;
+        background: linear-gradient(351deg, rgba(255, 139, 139, 0.82) 3.24%, rgb(255 139 139 / 57%) 48.55%, rgba(255, 139, 139, 0) 90.74%);
+    }
+    
+    
+
+
+    label:hover { /*cambia el color de ☰ */
+        background-color: aqua;
+    }
+
+    li { /*elimina el margen  de cada botón */
+        margin: 0px;
+        text-align: left;
+    }
+
+    label { /* dibuja la etiqueta ☰  con formato botón */
+        box-sizing: border-box;
+        display: block;
+        color: wheat;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 35px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: chocolate;
+    }
+
+
+    ul { /*deja de mostrar el bloque contenedor de los botones horizontales */
+        display: none;
+    }
+    ul li a {
+        text-decoration: none;
+    }
+    
+        ul li a:hover {
+            color: red;
+        }
+    
+        div nav ul li{
+            display: flex;
+            justify-content: center;
+        }
+    
+
+
+
+    }
