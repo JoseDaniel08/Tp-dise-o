@@ -4,7 +4,7 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 1vw;
 }
 
 body{
@@ -213,8 +213,13 @@ input{
     display: none;
 }
 @media all and (max-width: 768px) { /*cuando el dispositivo es como máximo de 700px*/
-    header{
+    header {
         height: 20em;
+        display: block;
+    }
+
+    #Logo{
+        display: none;
     }
 
     input:checked ~ ul { /*muestra todas el contenido de todas las etiquetas ul */
@@ -222,13 +227,14 @@ input{
     }
 
     input:checked ~ label { /*muestra todo el contenido de todas las etiquetas label */
-        background: lightgrey;
+        background: rgb(255, 104, 104);
         position: relative;
         top: 20px;
     }
 
     label:hover { /*cambia el color de ☰ */
-        background: grey;
+        background: #4ea3f3;
+
     }
 
     li { /*elimina el margen  de cada botón */
@@ -239,7 +245,6 @@ input{
     label { /* dibuja la etiqueta ☰  con formato botón */
         box-sizing: border-box;
         display: block;
-        border: 1px solid black;
         border-radius: 5px;
         width: 30px;
         height: 30px;
@@ -247,7 +252,7 @@ input{
         font-weight: bold;
         text-align: center;
         user-select: none;
-        background-color: chocolate;
+        background-color: #4ea3f3;
     }
 
     nav{
@@ -269,10 +274,10 @@ input{
     
         div nav ul li{
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: flex-start;
         }
-        #Logo{
-            position: relative;
-        }
-    
-}
+    button{
+        border-radius: 0px;
+    }    
+    }
