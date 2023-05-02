@@ -136,6 +136,8 @@ h2{
     top: 114px;
 }
 
+
+<!---Animista.net:---!>
 .scale-up-center {
 	-webkit-animation: scale-up-center 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) 0.5s both;
 	        animation: scale-up-center 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) 0.5s both;
