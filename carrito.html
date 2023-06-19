@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Carrito de Compra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <img class="navbar-logo" src="imagenes/logo.jpeg" alt="logo">
+      <a class="navbar-brand">Ocean Recycle Inc</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tienda.html">Tienda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Informacion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Carrito de Compra</h1>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+            <!-- Filas de productos en el carrito -->
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center">
+          <h3>Total: <span id="total-price"></span></h3>
+          <div>
+            <button id="clear-cart" class="btn btn-danger">Vaciar Carrito</button>
+            <button id="checkout" class="btn btn-success">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Obtiene los productos del carrito de compra desde el LocalStorage
+      var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      // Genera las filas de la tabla con los productos del carrito
+      function generateCartItems() {
+        var cartItemsContainer = $("#cart-items");
+        var totalPrice = 0;
+
+        for (var i = 0; i < cartItems.length; i++) {
+          var cartItem = cartItems[i];
+
+          var row = $("<tr></tr>");
+          var productName = $("<td></td>").text(cartItem.name);
+          var productPrice = $("<td></td>").text(cartItem.price);
+
+          row.append(productName);
+          row.append(productPrice);
+          cartItemsContainer.append(row);
+
+          totalPrice += cartItem.price;
+        }
+
+        $("#total-price").text(totalPrice);
+      }
+
+      // Actualiza el carrito de compra en el LocalStorage
+      function updateCartItems() {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }
+
+      // Agrega un producto al carrito de compra
+      function addToCart(product) {
+        cartItems.push(product);
+        updateCartItems();
+        generateCartItems();
+      }
+
+      // Vacía el carrito de compra
+      function clearCart() {
+        cartItems = [];
+        updateCartItems();
+        generateCartItems();
+      }
+
+      // Evento para vaciar el carrito de compra
+      $("#clear-cart").click(function() {
+        clearCart();
+      });
+
+      // Evento para comprar los productos del carrito
+      $("#checkout").click(function() {
+        // Implementa aquí la lógica para procesar la compra
+        alert("¡Compra realizada!");
+        clearCart();
+      });
+
+      // Genera los elementos del carrito al cargar la página
+      generateCartItems();
+    });
+  </script>
+</body>
+
+</html>

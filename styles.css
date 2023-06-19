@@ -1,0 +1,128 @@
+/* Estilos generales */
+
+body, .btn {
+    background-color: #52A3BD;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin-top: 30px;
+    background-color: #52A3BD;
+    padding: 20px;
+  }
+  
+  /* Estilos de la barra de navegación */
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #FFFFFF;
+  }
+  
+  /* Estilos del jumbotron */
+  
+  .jumbotron {
+    background-color: #52A3BD;
+    color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .jumbotron h1 {
+    font-size: 7rem;
+  }
+  
+  .jumbotron p {
+    font-size: 20px;
+  }
+  
+  /* Estilos del botón principal */
+  
+  .btn-primary {
+    background-color: #52A3BD;
+    border-color: #61d49f;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  .navbar-logo {
+    max-width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin-right: 10px; /* Añade un margen derecho para separarlo del texto */
+  }
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .product-card h4 {
+    margin-top: 10px;
+  }
+
+  .product-card p {
+    margin-bottom: 10px;
+  }
+
+  #cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .carousel-inner {
+    margin-bottom: 20px;
+  }
+
+  .carousel-control {
+    display: none;
+  }
+
+  .carousel-indicators {
+    bottom: 50px;
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #777;
+  }
+
+  .carousel-indicators .active {
+    background-color: #333;
+  }
+
+  /* Added CSS */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .carousel-inner {
+    max-width: 600px;
+  }
+
+  /* Added CSS */
+  .product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Added CSS */
+  .add-to-cart {
+    width: 100%;
+    font-size: 1rem;
+  }
