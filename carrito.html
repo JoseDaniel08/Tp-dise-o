@@ -12,7 +12,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <img class="navbar-logo" src="Imagenes/logo.jpeg" alt="logo">
+      <img class="navbar-logo" src="imagenes/logo.jpeg" alt="logo">
       <a class="navbar-brand">Ocean Recycle Inc</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,7 @@
           <li class="nav-item">
             <a class="nav-link" href="info.html">Informacion</a>
           </li>
+          
         </ul>
       </div>
     </div>
@@ -74,6 +75,8 @@
         var cartItemsContainer = $("#cart-items");
         var totalPrice = 0;
 
+        cartItemsContainer.empty();
+
         for (var i = 0; i < cartItems.length; i++) {
           var cartItem = cartItems[i];
 
@@ -113,6 +116,7 @@
       // Evento para vaciar el carrito de compra
       $("#clear-cart").click(function() {
         clearCart();
+        location.reload(); // Recarga la página después de vaciar el carrito
       });
 
       // Evento para comprar los productos del carrito

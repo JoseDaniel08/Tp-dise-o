@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Ocean Recycle Inc</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    function enviarFormulario() {
+      var proposito = document.getElementById("proposito").value;
+      // Simulación del envío del formulario (aquí se podría implementar la lógica para enviar el correo)
+      alert("El correo ha sido enviado correctamente.\nPropósito: " + proposito);
+      return false;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <!-- Aquí va el contenido del encabezado (header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <img class="navbar-logo" src="imagenes/logo.jpeg" alt="logo">
+        <a class="navbar-brand" href="#">Ocean Recycle Inc</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info.html">Informacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Pagina Grupal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contacto" class="container">
+      <h1>Contacto</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form onsubmit="return enviarFormulario()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="proposito">Propósito</label>
+              <select class="form-control" id="proposito" name="proposito" required>
+                <option value="">Seleccionar...</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Sugerencia">Sugerencia</option>
+                <option value="Reclamo">Reclamo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Aquí va el contenido del pie de página (footer) -->
+    <div class="container">
+      <p>&copy; 2023 Ocean Recycle Inc. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,128 +1,256 @@
+/* Añade la siguiente regla al inicio para aplicar estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+.carousel-container {
+  height: 500px; /* Establece la altura deseada */
+}
+
+.jumbotron {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.jumbotron .container {
+  text-align: center;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  color: #fff;
+}
+
+.jumbotron .btn {
+  margin-top: 20px;
+}
+.jumbotron h1 {
+  font-size: 6rem;
+}
+
+.jumbotron p {
+  font-size: 2  rem;
+}
+
+.jumbotron .btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.jumbotron .btn:hover {
+  background-color: #61d49f;
+  color: #ffffff;
+}
+/* Estilos del navbar */
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.navbar-logo {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Estilos del carousel */
+.carousel-control {
+  color: #fff;
+}
+
+.carousel-inner {
+  margin-bottom: 20px;
+}
+
+.carousel-indicators {
+  z-index: 1;
+  bottom: 0;
+}
+
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  border-radius: 100%;
+  background-color: rgba(217, 217, 217, 0.5);
+  margin-bottom: -75px;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+  height: 30px;
+  width: 30px;
+  margin-bottom: -75px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-container {
+  height: 400px; /* Ajusta la altura según tus necesidades */
+}
+
+.carousel-inner {
+  max-width: 600px;
+}
+
+/* Estilos de las cards de producto */
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ae3f3f;
+} 
+
+.product-card h4 {
+  margin-top: 10px;
+  color: white;
+}
+
+.product-card p {
+  margin-bottom: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+.add-to-cart {
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Estilos del botón del carrito */
+#cart-button {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+}
+.cart-container .cart-button  {
+  margin-left: 17px;
+  position: absolute;
+  bottom: 12px;
+
+}
+.cart-container .btn-primary{
+  background-color: transparent;
+  border: solid 2px #6affa5;
+}
+
+.cart-container .btn-primary:hover{
+  background-color: #6affa5;
+  color:  #222222
+
+}
 /* Estilos generales */
+body {
+  background-image: url(Imagenes/fondo.svg);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-body, .btn {
-    background-color: #52A3BD;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    margin-top: 30px;
-    background-color: #52A3BD;
-    padding: 20px;
-  }
-  
-  /* Estilos de la barra de navegación */
-  
-  .navbar-brand {
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    color: #FFFFFF;
-  }
-  
-  /* Estilos del jumbotron */
-  
-  .jumbotron {
-    background-color: #52A3BD;
-    color: #FFFFFF;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .jumbotron h1 {
-    font-size: 7rem;
-  }
-  
-  .jumbotron p {
-    font-size: 20px;
-  }
-  
-  /* Estilos del botón principal */
-  
-  .btn-primary {
-    background-color: #52A3BD;
-    border-color: #61d49f;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+body {
+  min-height: 100vh;
+}
+
+.container2 {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.container2::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-xs-6,
+.col-sm-4,
+.col-md-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Ajustes responsivos */
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    flex-basis: auto;}}
+    
+@media (max-width: 768px) {
+  .container2 {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  .navbar-logo {
-    max-width: 50px; /* Ajusta el tamaño según tus necesidades */
-    height: auto; /* Para mantener la proporción de la imagen */
-    margin-right: 10px; /* Añade un margen derecho para separarlo del texto */
-  }
-  .product-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .product-card h4 {
-    margin-top: 10px;
-  }
-
-  .product-card p {
-    margin-bottom: 10px;
-  }
-
-  #cart-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+  .navbar {
+    top: 0;
+    width: 100%;
     z-index: 999;
   }
-
-  .carousel-inner {
-    margin-bottom: 20px;
-  }
-
-  .carousel-control {
-    display: none;
-  }
-
-  .carousel-indicators {
-    bottom: 50px;
-  }
-
-  .carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background-color: #777;
-  }
-
   .carousel-indicators .active {
     background-color: #333;
+    height: 30px;
+    margin-bottom: -54px;
+    width: 30px;
+  }
+  .cart-container .cart-button {
+    margin-left: -13px;
+    scale: 0.7;
+    margin-top: -26px;
+    position: relative;
+}
+}
+
+@media (max-width: 576px) {
+  .container2 {
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
-  /* Added CSS */
-  .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  body {
+    background-image: url(Imagenes/fondoM.svg);
+    background-size: cover;
   }
-
-  .carousel-inner {
-    max-width: 600px;
+  .col-xs-6,
+  .col-sm-4,
+  .col-md-3 {
+    padding-left: 5px;
+    padding-right: 5px;
   }
-
-  /* Added CSS */
-  .product-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* Added CSS */
-  .add-to-cart {
-    width: 100%;
-    font-size: 1rem;
-  }
+}
